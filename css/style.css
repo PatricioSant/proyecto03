@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.grafica-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+canvas#grafica {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
