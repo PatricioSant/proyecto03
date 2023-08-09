@@ -1,27 +1,36 @@
 const $grafica = document.querySelector("#grafica");
 const etiquetas = ["Enero", "Febrero", "Marzo", "Abril"];
-const datosVentas2020 = {
+const datosVentas2023 = {
   label: "Ventas 2023",
   data: [5000, 1500, 8000, 5102],
-  backgroundColor: "rgba(54, 162, 235, 0.2)",
-  borderColor: "rgba(54, 162, 235, 1)",
-  borderWidth: 1,
+  backgroundColor: "rgba(75, 192, 192, 0.6)",
+  borderWidth: 0, // Elimina el borde
 };
 new Chart($grafica, {
-  type: "line",
+  type: "bar",
   data: {
     labels: etiquetas,
-    datasets: [datosVentas2020],
+    datasets: [datosVentas2023],
   },
   options: {
+    responsive: true,
+    animation: {
+      duration: 1000,
+    },
     scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
+      y: {
+        beginAtZero: true,
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+        labels: {
+          font: {
+            family: "Arial",
           },
         },
-      ],
+      },
     },
   },
 });
